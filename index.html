@@ -435,12 +435,16 @@
           </div>
           <div class="tl-date">Sep 2021 - Jun 2023</div>
         </div>
-        <p class="tl-intro">My first role out of my Bachelor's, on a 7-8 person engineering team responsible for production Kubernetes infrastructure supporting critical services. This is where I learned to think in terms of uptime, blast radius, and what happens at 2am when something breaks.</p>
+        <p class="tl-intro">My first role out of my Bachelor's, on an 8-person engineering team supporting production Kubernetes infrastructure for a US-based client (under NDA, so I can't name them). This is where I learned to think in terms of uptime, blast radius, and what happens when something breaks and people are depending on it staying up.</p>
         <ul class="tl-list">
-          <li>Administered and upgraded production Kubernetes clusters, balancing the need to stay current with the need to not break anything that was already working.</li>
-          <li>Monitored cluster health with Dynatrace and was one of the people on call to troubleshoot incidents, digging through pod logs and cluster events to find root causes under time pressure.</li>
-          <li>Renewed TLS certificates on schedule and scaled node pools ahead of workload demand, the kind of unglamorous work that only gets noticed when it's not done.</li>
+          <li>Upgraded production Kubernetes clusters on a regular cycle, planning each upgrade carefully so the cluster stayed current without breaking workloads that were already running.</li>
+          <li>Renewed TLS certificates for the clusters on schedule, the kind of unglamorous work that only gets noticed when it's missed.</li>
+          <li>Scaled nodes up and down in response to workload demand, balancing cost against having enough headroom for traffic spikes.</li>
+          <li>Built working knowledge of the core services that keep a cluster running (Ingress, Pods, kube-scheduler, kube-controller-manager, kube-proxy), which mattered most when something broke and I needed to know where to start looking.</li>
+          <li>Troubleshot incidents on critical services like Pods and Ingress, digging through logs and cluster events to find root causes under time pressure.</li>
+          <li>Monitored cluster health continuously using Dynatrace, which caught a fair number of problems before they turned into incidents.</li>
         </ul>
+        <p class="tl-intro" style="margin-top:14px;">Working inside an 8-person team on one client for nearly two years also taught me the less technical half of the job: staying easy to work with, picking things up quickly when the client's setup didn't match anything I'd seen before, and being someone teammates could hand a problem to without having to double check it afterward.</p>
       </div>
     </div>
   </div>
