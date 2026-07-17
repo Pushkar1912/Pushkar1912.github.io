@@ -4,694 +4,855 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pushkar Awate | AI Portfolio</title>
-<meta name="description" content="Portfolio of Pushkar Awate, Master of Artificial Intelligence graduate working across AI systems, agentic pipelines, and cloud infrastructure.">
+<meta name="description" content="Pushkar Awate — Master of Artificial Intelligence graduate (RMIT University) with 2+ years of production infrastructure experience as a Kubernetes Architect. Open to AI Solutions Architect, Agentic AI Engineer, and MLOps roles in Melbourne and remote.">
+<meta name="keywords" content="Pushkar Awate, AI Solutions Architect, Agentic AI Engineer, MLOps Engineer, Machine Learning Engineer, Kubernetes Architect, RMIT University, Melbourne AI portfolio">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b0f14">
+<link rel="canonical" href="https://pushkar1912.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pushkar Awate | AI Portfolio">
+<meta property="og:description" content="Master of Artificial Intelligence graduate (RMIT University) with 2+ years of production infrastructure experience as a Kubernetes Architect. Open to AI Solutions Architect and Agentic AI Engineer roles.">
+<meta property="og:url" content="https://pushkar1912.github.io/">
+<meta property="og:image" content="https://pushkar1912.github.io/assets/portfolio-photo.jpg">
+<meta property="og:site_name" content="Pushkar Awate">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pushkar Awate | AI Portfolio">
+<meta name="twitter:description" content="Master of Artificial Intelligence graduate (RMIT University) with 2+ years of production infrastructure experience as a Kubernetes Architect.">
+<meta name="twitter:image" content="https://pushkar1912.github.io/assets/portfolio-photo.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Person",
+"name":"Pushkar Awate",
+"url":"https://pushkar1912.github.io/",
+"image":"https://pushkar1912.github.io/assets/portfolio-photo.jpg",
+"jobTitle":"AI Solutions Architect",
+"alumniOf":{"@type":"CollegeOrUniversity","name":"RMIT University"},
+"knowsAbout":["Artificial Intelligence","Machine Learning","Kubernetes","MLOps","Cloud Infrastructure"],
+"sameAs":["https://www.linkedin.com/in/pushkar-awate-5a58231b5/","https://github.com/Pushkar1912"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0b0f14;
-    --bg-alt:#f7f8fa;
-    --panel:#111826;
-    --text:#1a2027;
-    --text-soft:#5b6675;
-    --text-invert:#e9edf3;
-    --text-invert-soft:#9aa5b3;
-    --accent:#2dd4bf;
-    --accent-dark:#0f766e;
-    --border:#e4e7ec;
-    --border-dark:#22303f;
-    --radius:14px;
-    --max:1080px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    font-family:'Inter',system-ui,-apple-system,sans-serif;
-    color:var(--text);
-    background:#fff;
-    line-height:1.6;
-  }
-  a{color:inherit;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
-  section{padding:88px 0;}
+:root{
+--bg:#0b0f14;
+--bg-alt:#f7f8fa;
+--panel:#111826;
+--text:#1a2027;
+--text-soft:#5b6675;
+--text-invert:#e9edf3;
+--text-invert-soft:#9aa5b3;
+--accent:#2dd4bf;
+--accent-dark:#0f766e;
+--border:#e4e7ec;
+--border-dark:#22303f;
+--radius:14px;
+--max:1080px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+margin:0;
+font-family:'Inter',system-ui,-apple-system,sans-serif;
+color:var(--text);
+background:#fff;
+line-height:1.6;
+}
+a{color:inherit;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+section{padding:88px 0;}
 
-  /* NAV */
-  nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(11,15,20,0.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--border-dark);
-  }
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;}
-  .brand{color:#fff;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:800;font-size:28px;letter-spacing:0.2px;text-decoration:none;}
-  .navlinks{display:flex;gap:26px;list-style:none;margin:0;padding:0;}
-  .navlinks a{color:var(--text-invert-soft);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s;}
-  .navlinks a:hover{color:#fff;}
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion: reduce){
+.reveal{opacity:1;transform:none;transition:none;}
+}
 
-  /* HERO */
-  .hero{
-    background:radial-gradient(circle at 15% 20%, #16212f 0%, var(--bg) 55%);
-    color:#fff;
-    padding:100px 0 90px;
-  }
-  .eyebrow{
-    display:inline-block;
-    color:var(--accent);
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:18px;
-  }
-  .hero h1{
-    font-size:42px;
-    font-weight:800;
-    margin:0 0 18px;
-    line-height:1.18;
-    max-width:740px;
-  }
-  .hero p.lead{
-    font-size:16.5px;
-    color:var(--text-invert-soft);
-    max-width:600px;
-    margin:0 0 34px;
-  }
-  .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:12px 22px;
-    border-radius:999px;
-    font-size:14px;
-    font-weight:600;
-    text-decoration:none;
-    transition:transform .15s, background .15s;
-  }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--accent);color:#04201c;}
-  .btn-primary:hover{background:#5ee7d5;}
-  .btn-ghost{border:1px solid var(--border-dark);color:#fff;}
-  .btn-ghost:hover{background:rgba(255,255,255,0.06);}
+/* NAV */
+nav{
+position:sticky;top:0;z-index:50;
+background:rgba(11,15,20,0.92);
+backdrop-filter:blur(8px);
+border-bottom:1px solid var(--border-dark);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:18px;}
+.brand{color:#fff;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:800;font-size:28px;letter-spacing:0.2px;text-decoration:none;}
+.nav-right{display:flex;align-items:center;gap:22px;}
+.navlinks{display:flex;gap:26px;list-style:none;margin:0;padding:0;}
+.navlinks a{color:var(--text-invert-soft);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s;position:relative;}
+.navlinks a:hover{color:#fff;}
+.navlinks a::after{
+content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;
+background:var(--accent);transition:width .2s ease;
+}
+.navlinks a:hover::after{width:100%;}
+.nav-cta{
+display:inline-flex;align-items:center;
+background:var(--accent);color:#04201c;
+padding:9px 18px;border-radius:999px;
+font-size:13.5px;font-weight:700;text-decoration:none;
+transition:background .15s, transform .15s;
+white-space:nowrap;
+}
+.nav-cta:hover{background:#5ee7d5;transform:translateY(-1px);}
+.nav-toggle{
+display:none;
+flex-direction:column;
+justify-content:center;
+gap:5px;
+width:34px;height:34px;
+background:none;border:none;cursor:pointer;
+padding:0;
+}
+.nav-toggle span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease, opacity .25s ease;}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
-  .stat-strip{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1px;
-    background:var(--border-dark);
-    margin-top:56px;
-    border:1px solid var(--border-dark);
-    border-radius:var(--radius);
-    overflow:hidden;
-  }
-  .stat{background:var(--panel);padding:28px 24px;}
-  .stat .num{font-size:32px;font-weight:800;color:#fff;}
-  .stat .lbl{font-size:14.5px;color:var(--text-invert-soft);margin-top:8px;line-height:1.4;}
+/* HERO */
+.hero{
+background:radial-gradient(circle at 15% 20%, #16212f 0%, var(--bg) 55%);
+color:#fff;
+padding:100px 0 90px;
+}
+.eyebrow{
+display:inline-block;
+color:var(--accent);
+font-size:13px;
+font-weight:600;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:18px;
+}
+.hero h1{
+font-size:42px;
+font-weight:800;
+margin:0 0 18px;
+line-height:1.18;
+max-width:740px;
+}
+.hero p.lead{
+font-size:16.5px;
+color:var(--text-invert-soft);
+max-width:600px;
+margin:0 0 34px;
+}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+display:inline-flex;align-items:center;gap:8px;
+padding:12px 22px;
+border-radius:999px;
+font-size:14px;
+font-weight:600;
+text-decoration:none;
+transition:transform .15s, background .15s, box-shadow .15s;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--accent);color:#04201c;box-shadow:0 8px 24px -8px rgba(45,212,191,0.55);}
+.btn-primary:hover{background:#5ee7d5;}
+.btn-ghost{border:1px solid var(--border-dark);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,0.06);}
 
-  /* SECTION HEADS */
-  .section-head{margin-bottom:44px;}
-  .kicker{
-    color:var(--accent-dark);
-    font-size:12.5px;
-    font-weight:700;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:10px;
-  }
-  h2.section-title{font-size:29px;font-weight:800;margin:0;color:var(--text);}
-  .section-sub{color:var(--text-soft);font-size:15.5px;margin-top:10px;max-width:640px;}
+.stat-strip{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:1px;
+background:var(--border-dark);
+margin-top:56px;
+border:1px solid var(--border-dark);
+border-radius:var(--radius);
+overflow:hidden;
+}
+.stat{background:var(--panel);padding:28px 24px;transition:background .2s ease;}
+.stat:hover{background:#16212f;}
+.stat .num{font-size:32px;font-weight:800;color:#fff;}
+.stat .lbl{font-size:14.5px;color:var(--text-invert-soft);margin-top:8px;line-height:1.4;}
 
-  /* ABOUT */
-  #about{background:var(--bg-alt);}
-  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start;}
-  .about-grid p{color:var(--text-soft);font-size:15.5px;margin:0 0 16px;}
-  .about-photo{
-    width:100%;
-    aspect-ratio:1/1;
-    border-radius:var(--radius);
-    background:linear-gradient(135deg,#16212f,#0b0f14);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--text-invert-soft);
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:0.4px;
-    text-align:center;
-    margin-bottom:20px;
-    border:1px solid var(--border-dark);
-    overflow:hidden;
-  }
-  .about-photo span{display:block;font-size:34px;font-weight:800;color:#fff;margin-bottom:6px;}
-  .fact-card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:22px 24px;
-  }
-  .fact-card h3{margin:0 0 14px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--text-soft);}
-  .fact-list{list-style:none;margin:0;padding:0;}
-  .fact-list li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--border);font-size:14px;}
-  .fact-list li:first-child{border-top:none;}
-  .fact-list span:first-child{color:var(--text-soft);}
-  .fact-list span:last-child{font-weight:600;text-align:right;}
+/* SECTION HEADS */
+.section-head{margin-bottom:44px;}
+.kicker{
+color:var(--accent-dark);
+font-size:12.5px;
+font-weight:700;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+h2.section-title{font-size:29px;font-weight:800;margin:0;color:var(--text);}
+.section-sub{color:var(--text-soft);font-size:15.5px;margin-top:10px;max-width:640px;}
 
-  /* EDUCATION */
-  .edu-card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:26px 28px;
-    margin-bottom:20px;
-  }
-  .edu-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:6px;}
-  .edu-title{font-size:18px;font-weight:700;}
-  .edu-org{color:var(--accent-dark);font-weight:600;font-size:14.5px;}
-  .edu-date{font-size:13px;color:var(--text-soft);font-weight:600;white-space:nowrap;}
-  .edu-note{color:var(--text-soft);font-size:14.5px;margin:10px 0 18px;}
-  .edu-group{margin-top:16px;}
-  .edu-group h5{margin:0 0 8px;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:var(--text-soft);}
+/* ABOUT */
+#about{background:var(--bg-alt);}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start;}
+.about-grid p{color:var(--text-soft);font-size:15.5px;margin:0 0 16px;}
+.about-photo{
+width:100%;
+aspect-ratio:1/1;
+border-radius:var(--radius);
+background:linear-gradient(135deg,#16212f,#0b0f14);
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--text-invert-soft);
+font-size:13px;
+font-weight:600;
+letter-spacing:0.4px;
+text-align:center;
+margin-bottom:20px;
+border:1px solid var(--border-dark);
+overflow:hidden;
+}
+.about-photo img{display:block;}
+.fact-card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:22px 24px;
+transition:box-shadow .2s ease, transform .2s ease;
+}
+.fact-card:hover{box-shadow:0 12px 28px -14px rgba(15,23,32,0.18);transform:translateY(-2px);}
+.fact-card h3{margin:0 0 14px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--text-soft);}
+.fact-list{list-style:none;margin:0;padding:0;}
+.fact-list li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--border);font-size:14px;}
+.fact-list li:first-child{border-top:none;}
+.fact-list span:first-child{color:var(--text-soft);}
+.fact-list span:last-child{font-weight:600;text-align:right;}
 
-  /* EXPERIENCE */
-  .timeline{border-left:2px solid var(--border);margin-left:6px;}
-  .tl-item{position:relative;padding:0 0 44px 32px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:'';position:absolute;left:-7px;top:4px;
-    width:12px;height:12px;border-radius:50%;
-    background:var(--accent);border:3px solid #fff;
-    box-shadow:0 0 0 2px var(--border);
-  }
-  .tl-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:4px;}
-  .tl-role{font-size:18px;font-weight:700;}
-  .tl-org{color:var(--accent-dark);font-weight:600;font-size:14.5px;}
-  .tl-date{font-size:13px;color:var(--text-soft);font-weight:600;white-space:nowrap;}
-  .tl-intro{color:var(--text-soft);font-size:14.5px;margin:10px 0 14px;}
-  .tl-list{margin:0;padding-left:18px;color:var(--text-soft);font-size:14.5px;}
-  .tl-list li{margin-bottom:9px;}
+/* EDUCATION */
+.edu-card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:26px 28px;
+margin-bottom:20px;
+transition:box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.edu-card:hover{box-shadow:0 14px 32px -16px rgba(15,23,32,0.2);transform:translateY(-3px);border-color:var(--accent);}
+.edu-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:6px;}
+.edu-title{font-size:18px;font-weight:700;}
+.edu-org{color:var(--accent-dark);font-weight:600;font-size:14.5px;}
+.edu-date{font-size:13px;color:var(--text-soft);font-weight:600;white-space:nowrap;}
+.edu-note{color:var(--text-soft);font-size:14.5px;margin:10px 0 18px;}
+.edu-group{margin-top:16px;}
+.edu-group h5{margin:0 0 8px;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:var(--text-soft);}
 
-  /* PROJECTS */
-  #projects{background:var(--bg-alt);}
-  .proj-grid{display:flex;flex-direction:column;gap:22px;}
-  .case-card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:28px 30px;
-  }
-  .case-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:6px;}
-  .card-tag{
-    display:inline-block;
-    font-size:11.5px;
-    font-weight:700;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    color:var(--accent-dark);
-    background:#e6fbf8;
-    padding:4px 10px;
-    border-radius:999px;
-    margin-bottom:12px;
-    width:fit-content;
-  }
-  .case-card h3{margin:0 0 16px;font-size:19px;font-weight:700;}
-  .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:18px;}
-  .case-label{font-size:11.5px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;color:var(--text-soft);margin-bottom:6px;}
-  .case-text{font-size:14.5px;color:var(--text);line-height:1.55;}
-  .chip-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
-  .chip{
-    font-size:12px;font-weight:600;
-    background:var(--bg-alt);
-    border:1px solid var(--border);
-    color:var(--text-soft);
-    padding:4px 10px;border-radius:8px;
-  }
-  .card-link{
-    font-size:13.5px;font-weight:700;color:var(--accent-dark);
-    text-decoration:none;display:inline-flex;align-items:center;gap:6px;
-  }
-  .card-link:hover{text-decoration:underline;}
+/* EXPERIENCE */
+.timeline{border-left:2px solid var(--border);margin-left:6px;}
+.tl-item{position:relative;padding:0 0 44px 32px;transition:transform .2s ease;}
+.tl-item:hover{transform:translateX(4px);}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+content:'';position:absolute;left:-7px;top:4px;
+width:12px;height:12px;border-radius:50%;
+background:var(--accent);border:3px solid #fff;
+box-shadow:0 0 0 2px var(--border);
+transition:box-shadow .2s ease;
+}
+.tl-item:hover::before{box-shadow:0 0 0 4px rgba(45,212,191,0.35);}
+.tl-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:4px;}
+.tl-role{font-size:18px;font-weight:700;}
+.tl-org{color:var(--accent-dark);font-weight:600;font-size:14.5px;}
+.tl-date{font-size:13px;color:var(--text-soft);font-weight:600;white-space:nowrap;}
+.tl-intro{color:var(--text-soft);font-size:14.5px;margin:10px 0 14px;}
+.tl-list{margin:0;padding-left:18px;color:var(--text-soft);font-size:14.5px;}
+.tl-list li{margin-bottom:9px;}
 
-  /* SKILLS */
-  .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
-  .skill-card{
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:20px 22px;
-  }
-  .skill-card h4{margin:0 0 14px;font-size:13px;letter-spacing:0.8px;text-transform:uppercase;color:var(--accent-dark);}
-  .pill-row{display:flex;flex-wrap:wrap;gap:8px;}
-  .pill{
-    font-size:13px;font-weight:600;
-    background:var(--bg-alt);
-    color:var(--text);
-    padding:6px 12px;
-    border-radius:999px;
-    border:1px solid var(--border);
-  }
+/* PROJECTS */
+#projects{background:var(--bg-alt);}
+.proj-grid{display:flex;flex-direction:column;gap:22px;}
+.case-card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px 30px;
+transition:box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.case-card:hover{box-shadow:0 16px 36px -18px rgba(15,23,32,0.22);transform:translateY(-3px);border-color:var(--accent);}
+.case-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:6px;}
+.card-tag{
+display:inline-block;
+font-size:11.5px;
+font-weight:700;
+letter-spacing:0.5px;
+text-transform:uppercase;
+color:var(--accent-dark);
+background:#e6fbf8;
+padding:4px 10px;
+border-radius:999px;
+margin-bottom:12px;
+width:fit-content;
+}
+.case-card h3{margin:0 0 16px;font-size:19px;font-weight:700;}
+.case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:18px;}
+.case-label{font-size:11.5px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;color:var(--text-soft);margin-bottom:6px;}
+.case-text{font-size:14.5px;color:var(--text);line-height:1.55;}
+.chip-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.chip{
+font-size:12px;font-weight:600;
+background:var(--bg-alt);
+border:1px solid var(--border);
+color:var(--text-soft);
+padding:4px 10px;border-radius:8px;
+transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.chip:hover{background:var(--accent);color:#04201c;border-color:var(--accent);}
+.card-link{
+font-size:13.5px;font-weight:700;color:var(--accent-dark);
+text-decoration:none;display:inline-flex;align-items:center;gap:6px;
+transition:gap .15s ease;
+}
+.card-link:hover{text-decoration:underline;gap:10px;}
 
-  /* CONTACT */
-  #contact{background:var(--bg-alt);}
-  .contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start;}
-  .contact-form{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:30px 32px;
-  }
-  .form-row{margin-bottom:18px;}
-  .form-row label{display:block;font-size:13px;font-weight:600;color:var(--text-soft);margin-bottom:7px;}
-  .form-row input,.form-row textarea{
-    width:100%;
-    border:1px solid var(--border);
-    border-radius:8px;
-    padding:11px 13px;
-    font-size:14.5px;
-    font-family:inherit;
-    color:var(--text);
-    background:var(--bg-alt);
-  }
-  .form-row input:focus,.form-row textarea:focus{outline:2px solid var(--accent);outline-offset:1px;}
-  .form-row textarea{resize:vertical;min-height:120px;}
-  .contact-side{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:26px 28px;
-  }
-  .contact-side h3{margin:0 0 10px;font-size:17px;font-weight:700;}
-  .contact-side p{color:var(--text-soft);font-size:14.5px;margin:0 0 20px;}
-  .social-row{display:flex;gap:12px;}
-  .social-link{
-    width:42px;height:42px;
-    border-radius:50%;
-    border:1px solid var(--border);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--text-soft);
-    transition:background .15s, color .15s, border-color .15s;
-  }
-  .social-link:hover{background:var(--accent);border-color:var(--accent);color:#04201c;}
-  .social-link svg{width:19px;height:19px;}
+/* SKILLS */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.skill-card{
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:20px 22px;
+transition:box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.skill-card:hover{box-shadow:0 14px 30px -16px rgba(15,23,32,0.18);transform:translateY(-3px);border-color:var(--accent);}
+.skill-card h4{margin:0 0 14px;font-size:13px;letter-spacing:0.8px;text-transform:uppercase;color:var(--accent-dark);}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{
+font-size:13px;font-weight:600;
+background:var(--bg-alt);
+color:var(--text);
+padding:6px 12px;
+border-radius:999px;
+border:1px solid var(--border);
+transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.pill:hover{background:var(--accent);color:#04201c;border-color:var(--accent);}
 
-  /* FOOTER */
-  footer{
-    background:var(--bg);
-    color:var(--text-invert-soft);
-    padding:34px 0;
-    text-align:center;
-    font-size:13px;
-  }
+/* CONTACT */
+#contact{background:var(--bg-alt);}
+.contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start;}
+.contact-form{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:30px 32px;
+}
+.form-row{margin-bottom:18px;}
+.form-row label{display:block;font-size:13px;font-weight:600;color:var(--text-soft);margin-bottom:7px;}
+.form-row input,.form-row textarea{
+width:100%;
+border:1px solid var(--border);
+border-radius:8px;
+padding:11px 13px;
+font-size:14.5px;
+font-family:inherit;
+color:var(--text);
+background:var(--bg-alt);
+transition:outline-color .15s ease, border-color .15s ease;
+}
+.form-row input:focus,.form-row textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.form-row textarea{resize:vertical;min-height:120px;}
+.contact-side{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:26px 28px;
+}
+.contact-side h3{margin:0 0 10px;font-size:17px;font-weight:700;}
+.contact-side p{color:var(--text-soft);font-size:14.5px;margin:0 0 20px;}
+.social-row{display:flex;gap:12px;}
+.social-link{
+width:42px;height:42px;
+border-radius:50%;
+border:1px solid var(--border);
+display:flex;align-items:center;justify-content:center;
+color:var(--text-soft);
+transition:background .15s, color .15s, border-color .15s, transform .15s;
+}
+.social-link:hover{background:var(--accent);border-color:var(--accent);color:#04201c;transform:translateY(-2px);}
+.social-link svg{width:19px;height:19px;}
 
-  @media (max-width:800px){
-    .about-grid{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}
-    .hero h1{font-size:30px;}
-    .navlinks{display:none;}
-    .stat-strip{grid-template-columns:1fr;}
-  }
+/* FOOTER */
+footer{
+background:var(--bg);
+color:var(--text-invert-soft);
+padding:34px 0;
+text-align:center;
+font-size:13px;
+}
+
+@media (max-width:900px){
+.about-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:800px){
+.contact-grid{grid-template-columns:1fr;}
+.hero h1{font-size:30px;}
+.navlinks{
+display:none;
+position:absolute;top:100%;left:0;right:0;
+flex-direction:column;gap:0;
+background:#0b0f14;
+border-bottom:1px solid var(--border-dark);
+padding:8px 28px 18px;
+}
+.navlinks.open{display:flex;}
+.navlinks a{padding:12px 0;border-top:1px solid var(--border-dark);}
+.navlinks a:first-child{border-top:none;}
+.navlinks a::after{display:none;}
+.nav-toggle{display:flex;}
+.stat-strip{grid-template-columns:1fr;}
+}
+
+@media (max-width:480px){
+.hero{padding:80px 0 60px;}
+.hero h1{font-size:26px;}
+section{padding:64px 0;}
+.nav-cta{padding:8px 14px;font-size:12.5px;}
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="wrap">
-    <a class="brand" href="#top">Pushkar Awate</a>
-    <ul class="navlinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+<div class="wrap">
+<a class="brand" href="#top">Pushkar Awate</a>
+<div class="nav-right">
+<ul class="navlinks" id="navlinks">
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a class="nav-cta" href="#contact">Contact Me</a>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
-    <span class="eyebrow">Artificial Intelligence</span>
-    <h1>I build the systems that make AI actually work.</h1>
-    <p class="lead">Master of Artificial Intelligence graduate from RMIT University with 2+ years of production infrastructure experience as a Kubernetes Architect. Read on for the full story.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="#projects">View projects</a>
-      <a class="btn btn-ghost" href="https://github.com/Pushkar1912" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
+<div class="wrap">
+<span class="eyebrow">Artificial Intelligence</span>
+<h1>I build the systems that make AI actually work.</h1>
+<p class="lead">Master of Artificial Intelligence graduate from RMIT University with 2+ years of production infrastructure experience as a Kubernetes Architect. Read on for the full story.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="#contact">Get in touch</a>
+<a class="btn btn-ghost" href="#projects">View projects</a>
+</div>
 
-    <div class="stat-strip">
-      <div class="stat">
-        <div class="num">2+ yrs</div>
-        <div class="lbl">Production infrastructure experience</div>
-      </div>
-      <div class="stat">
-        <div class="num">3</div>
-        <div class="lbl">Projects across AI/ML, cloud, and IoT</div>
-      </div>
-      <div class="stat">
-        <div class="num">11</div>
-        <div class="lbl">DS1 pipeline tasks shipped through an agentic, peer-reviewed workflow</div>
-      </div>
-      <div class="stat">
-        <div class="num">14</div>
-        <div class="lbl">Courses completed across my Master of AI</div>
-      </div>
-    </div>
-  </div>
+<div class="stat-strip">
+<div class="stat">
+<div class="num">2+ yrs</div>
+<div class="lbl">Production infrastructure experience</div>
+</div>
+<div class="stat">
+<div class="num">3</div>
+<div class="lbl">Projects across AI/ML, cloud, and IoT</div>
+</div>
+<div class="stat">
+<div class="num">11</div>
+<div class="lbl">DS1 pipeline tasks shipped through an agentic, peer-reviewed workflow</div>
+</div>
+<div class="stat">
+<div class="num">14</div>
+<div class="lbl">Courses completed across my Master of AI</div>
+</div>
+</div>
+</div>
 </header>
 
 <section id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div>
-        <div class="kicker">About</div>
-        <h2 class="section-title">From keeping clusters up to keeping models honest</h2>
-        <p style="margin-top:22px;">I didn't start out in AI. My first two years out of my undergrad degree were spent as a Kubernetes Architect at Atos-Syntel, on a small team responsible for keeping production clusters alive: renewing certificates before they expired, scaling node pools before traffic spiked, and getting paged when pods started failing at 2am. It's not glamorous work, but it teaches you something most AI courses don't: a system is only as good as its worst day in production.</p>
-        <p>That's the lens I carried into my Master of Artificial Intelligence at RMIT. I went in curious about models, and came out more interested in the systems around them. That shift became concrete during my internship at Prodegee, where I worked on a geospatial classification pipeline that wasn't just a notebook full of experiments. It ran through a proper GitHub kanban workflow, went through peer review, and handed off to Kestra for orchestration, with the output consumed by two other teams downstream. Watching a model I built actually get used by people I'd never spoken to made the "production" part of production ML click for me in a way lectures never did.</p>
-        <p>These days I'm drawn to roles that sit at that intersection: AI Solutions Architect, Agentic AI Engineer, and similar titles that care as much about how an AI system is designed, deployed, and kept running as about the model inside it. If a role needs someone who can talk infrastructure and machine learning in the same sentence, that's usually where I'm most useful.</p>
-        <p>Outside of work, I'm still the person who reads the postmortem after something breaks, even when it's not my system.</p>
-      </div>
-      <div>
-        <div class="about-photo">
-          <img src="assets/Portfolio%20photo.PNG" alt="Pushkar Awate" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;">
-        </div>
-        <div class="fact-card">
-          <h3>Quick facts</h3>
-          <ul class="fact-list">
-            <li><span>Education</span><span>M.AI, RMIT University</span></li>
-            <li><span>Prior degree</span><span>B.IT, Pune University</span></li>
-            <li><span>Based in</span><span>Melbourne, Australia</span></li>
-            <li><span>Core stack</span><span>Python, XGBoost, AWS</span></li>
-            <li><span>GitHub</span><span>github.com/Pushkar1912</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="about-grid">
+<div class="reveal">
+<div class="kicker">About</div>
+<h2 class="section-title">From keeping clusters up to keeping models honest</h2>
+<p style="margin-top:22px;">I didn't start out in AI. My first two years out of my undergrad degree were spent as a Kubernetes Architect at Atos-Syntel, on a small team responsible for keeping production clusters alive: renewing certificates before they expired, scaling node pools before traffic spiked, and staying calm when pods started failing at 2am. That grounding taught me something most AI courses don't: a system is only as good as its worst day in production.</p>
+<p>That's the lens I carried into my Master of Artificial Intelligence at RMIT. I went in curious about models and came out even more interested in the systems that carry them into production. That shift became concrete during my internship at Prodegee, where I worked on a geospatial classification pipeline that went well beyond a notebook full of experiments. It ran through a proper GitHub kanban workflow, went through peer review, and handed off to Kestra for orchestration, with the output consumed by two other teams downstream. Watching a model I built get used by people I'd never spoken to made the "production" part of production ML click in a way no lecture ever had.</p>
+<p>These days I'm drawn to roles that sit at that intersection: AI Solutions Architect, Agentic AI Engineer, and similar titles that care as much about how an AI system is designed, deployed, and kept running as about the model inside it. If a role needs someone who can talk infrastructure and machine learning in the same sentence, that's usually where I add the most value.</p>
+<p>Outside of work, I'm the person who still reads the postmortem after something breaks, even when it isn't my system to fix — curiosity that translates directly into how I approach a new codebase or pipeline.</p>
+</div>
+<div class="reveal">
+<div class="about-photo">
+<img src="assets/portfolio-photo.jpg" alt="Pushkar Awate" width="1100" height="1407" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;">
+</div>
+<div class="fact-card">
+<h3>Quick facts</h3>
+<ul class="fact-list">
+<li><span>Education</span><span>M.AI, RMIT University</span></li>
+<li><span>Prior degree</span><span>B.IT, Pune University</span></li>
+<li><span>Based in</span><span>Melbourne, Australia</span></li>
+<li><span>Core stack</span><span>Python, XGBoost, AWS</span></li>
+<li><span>GitHub</span><span>github.com/Pushkar1912</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section id="education">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Education</div>
-      <h2 class="section-title">What I actually studied</h2>
-      <p class="section-sub">Two degrees, on either side of a career change: general IT first, then a deliberate pivot into AI.</p>
-    </div>
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Education</div>
+<h2 class="section-title">What I actually studied</h2>
+<p class="section-sub">Two degrees, on either side of a career change: general IT first, then a deliberate pivot into AI.</p>
+</div>
 
-    <div class="edu-card">
-      <div class="edu-head">
-        <div>
-          <div class="edu-title">Master of Artificial Intelligence</div>
-          <div class="edu-org">RMIT University, Melbourne</div>
-        </div>
-        <div class="edu-date">2024 - 2026</div>
-      </div>
-      <p class="edu-note">My final-semester project, AI Postgrad Project, was completed as the Prodegee internship described under Experience below rather than a separate academic exercise.</p>
+<div class="edu-card reveal">
+<div class="edu-head">
+<div>
+<div class="edu-title">Master of Artificial Intelligence</div>
+<div class="edu-org">RMIT University, Melbourne</div>
+</div>
+<div class="edu-date">2024 - 2026</div>
+</div>
+<p class="edu-note">My final-semester project, AI Postgrad Project, was completed as the Prodegee internship described under Experience below rather than a separate academic exercise.</p>
 
-      <div class="edu-group">
-        <h5>Core AI &amp; ML</h5>
-        <div class="pill-row">
-          <span class="pill">Artificial Intelligence (incl. Reinforcement Learning)</span>
-          <span class="pill">Deep Learning</span>
-          <span class="pill">Computational Machine Learning</span>
-          <span class="pill">Intelligent Decision Making</span>
-          <span class="pill">Data Mining</span>
-        </div>
-      </div>
-      <div class="edu-group">
-        <h5>Data Engineering &amp; Programming</h5>
-        <div class="pill-row">
-          <span class="pill">Advanced Programming for Data Science</span>
-          <span class="pill">Advanced Programming</span>
-          <span class="pill">Practical Data Science with Python</span>
-          <span class="pill">Algorithms and Analysis</span>
-          <span class="pill">Programming Fundamentals</span>
-        </div>
-      </div>
-      <div class="edu-group">
-        <h5>Foundations &amp; Systems</h5>
-        <div class="pill-row">
-          <span class="pill">Cloud Computing</span>
-          <span class="pill">Discrete Mathematics</span>
-          <span class="pill">Social Media &amp; Network Analytics</span>
-          <span class="pill">The AI Professional</span>
-        </div>
-      </div>
-    </div>
+<div class="edu-group">
+<h5>Core AI &amp; ML</h5>
+<div class="pill-row">
+<span class="pill">Artificial Intelligence (incl. Reinforcement Learning)</span>
+<span class="pill">Deep Learning</span>
+<span class="pill">Computational Machine Learning</span>
+<span class="pill">Intelligent Decision Making</span>
+<span class="pill">Data Mining</span>
+</div>
+</div>
+<div class="edu-group">
+<h5>Data Engineering &amp; Programming</h5>
+<div class="pill-row">
+<span class="pill">Advanced Programming for Data Science</span>
+<span class="pill">Advanced Programming</span>
+<span class="pill">Practical Data Science with Python</span>
+<span class="pill">Algorithms and Analysis</span>
+<span class="pill">Programming Fundamentals</span>
+</div>
+</div>
+<div class="edu-group">
+<h5>Foundations &amp; Systems</h5>
+<div class="pill-row">
+<span class="pill">Cloud Computing</span>
+<span class="pill">Discrete Mathematics</span>
+<span class="pill">Social Media &amp; Network Analytics</span>
+<span class="pill">The AI Professional</span>
+</div>
+</div>
+</div>
 
-    <div class="edu-card">
-      <div class="edu-head">
-        <div>
-          <div class="edu-title">Bachelor of Information Technology</div>
-          <div class="edu-org">Pune University</div>
-        </div>
-        <div class="edu-date">CGPA 7.78 / 10</div>
-      </div>
-      <p class="edu-note" style="margin-bottom:0;">General IT foundation, before I moved into infrastructure work and later into AI.</p>
-    </div>
-  </div>
+<div class="edu-card reveal">
+<div class="edu-head">
+<div>
+<div class="edu-title">Bachelor of Information Technology</div>
+<div class="edu-org">Pune University</div>
+</div>
+<div class="edu-date">CGPA 7.78 / 10</div>
+</div>
+<p class="edu-note" style="margin-bottom:0;">General IT foundation, before I moved into infrastructure work and later into AI.</p>
+</div>
+</div>
 </section>
 
 <section id="experience">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Experience</div>
-      <h2 class="section-title">Where I've worked</h2>
-      <p class="section-sub">Two roles, one thread. First keeping infrastructure reliable, now keeping ML pipelines reliable too.</p>
-    </div>
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Experience</div>
+<h2 class="section-title">Where I've worked</h2>
+<p class="section-sub">Two roles, one thread. First keeping infrastructure reliable, now keeping ML pipelines reliable too.</p>
+</div>
 
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-head">
-          <div>
-            <div class="tl-role">AI/ML Engineering Intern</div>
-            <div class="tl-org">Prodegee (via RMIT)</div>
-          </div>
-          <div class="tl-date">Feb 2026 - Jun 2026</div>
-        </div>
-        <p class="tl-intro">I joined Prodegee to get hands-on experience with ML the way real teams build it: version-controlled, peer-reviewed, and reproducible, rather than a one-off notebook. The project was a geospatial classification pipeline used to predict outcomes across villages in Mauritania from survey and geospatial data.</p>
-        <ul class="tl-list">
-          <li>Worked inside an agentic, version-controlled pipeline: every task moved through a GitHub kanban board with a documented kickoff and a peer review before it was considered done, and Kestra handled orchestrating the pipeline steps end to end.</li>
-          <li>Built an XGBoost classifier on an 8-country geospatial corpus and ran 100 Optuna trials to tune it, lifting the model's F1 score in the process.</li>
-          <li>Benchmarked XGBoost against Random Forest and Logistic Regression across 200 surveyed villages, then tested generalization on 35 additional villages that had no survey data at all.</li>
-          <li>Tracked down a feature collapse bug that was quietly wrecking model quality. Fixing it took the key feature-target correlation from -0.714 to +0.600, which is the difference between a model that's actively misleading and one that's usable.</li>
-          <li>Built an out-of-distribution flagging system so the model could be trusted to run blind inference on 2,996 villages that had never been surveyed, instead of only the ones with labeled data.</li>
-          <li>Validated the final predictions visually in QGIS before handing off production-ready JSON artifacts to two downstream teams (DS2 and DA1) who built on top of the output.</li>
-        </ul>
-      </div>
+<div class="timeline reveal">
+<div class="tl-item">
+<div class="tl-head">
+<div>
+<div class="tl-role">AI/ML Engineering Intern</div>
+<div class="tl-org">Prodegee (via RMIT)</div>
+</div>
+<div class="tl-date">Feb 2026 - Jun 2026</div>
+</div>
+<p class="tl-intro">I joined Prodegee to get hands-on experience with ML the way real teams build it: version-controlled, peer-reviewed, and reproducible, rather than a one-off notebook. The project was a geospatial classification pipeline used to predict outcomes across villages in Mauritania from survey and geospatial data.</p>
+<ul class="tl-list">
+<li>Worked inside an agentic, version-controlled pipeline: every task moved through a GitHub kanban board with a documented kickoff and a peer review before it was considered done, and Kestra handled orchestrating the pipeline steps end to end.</li>
+<li>Built an XGBoost classifier on an 8-country geospatial corpus and ran 100 Optuna trials to tune it, lifting the model's F1 score in the process.</li>
+<li>Benchmarked XGBoost against Random Forest and Logistic Regression across 200 surveyed villages, then tested generalization on 35 additional villages that had no survey data at all.</li>
+<li>Tracked down a feature collapse bug that was quietly wrecking model quality. Fixing it took the key feature-target correlation from -0.714 to +0.600, which is the difference between a model that's actively misleading and one that's usable.</li>
+<li>Built an out-of-distribution flagging system so the model could be trusted to run blind inference on 2,996 villages that had never been surveyed, instead of only the ones with labeled data.</li>
+<li>Validated the final predictions visually in QGIS before handing off production-ready JSON artifacts to two downstream teams (DS2 and DA1) who built on top of the output.</li>
+</ul>
+</div>
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div>
-            <div class="tl-role">Kubernetes Architect</div>
-            <div class="tl-org">Atos-Syntel</div>
-          </div>
-          <div class="tl-date">Sep 2021 - Jun 2023</div>
-        </div>
-        <p class="tl-intro">My first role out of my Bachelor's, on a 7-person engineering team supporting production Kubernetes infrastructure for a US-based client (under NDA, so I can't name them). This is where I learned to think in terms of uptime, blast radius, and what happens when something breaks and people are depending on it staying up.</p>
-        <ul class="tl-list">
-          <li>Upgraded production Kubernetes clusters on a regular cycle, planning each upgrade carefully so the cluster stayed current without breaking workloads that were already running.</li>
-          <li>Renewed TLS certificates for the clusters on schedule, the kind of unglamorous work that only gets noticed when it's missed.</li>
-          <li>Scaled nodes up and down in response to workload demand, balancing cost against having enough headroom for traffic spikes.</li>
-          <li>Built working knowledge of the core services that keep a cluster running (Ingress, Pods, kube-scheduler, kube-controller-manager, kube-proxy), which mattered most when something broke and I needed to know where to start looking.</li>
-          <li>Troubleshot incidents on critical services like Pods and Ingress, digging through logs and cluster events to find root causes under time pressure.</li>
-          <li>Monitored cluster health continuously using Dynatrace, which caught a fair number of problems before they turned into incidents.</li>
-        </ul>
-        <p class="tl-intro" style="margin-top:14px;">Working inside a 7-person team on one client for nearly two years also taught me the less technical half of the job: staying easy to work with, picking things up quickly when the client's setup didn't match anything I'd seen before, and being someone teammates could hand a problem to without having to double check it afterward.</p>
-      </div>
-    </div>
-  </div>
+<div class="tl-item">
+<div class="tl-head">
+<div>
+<div class="tl-role">Kubernetes Architect</div>
+<div class="tl-org">Atos-Syntel</div>
+</div>
+<div class="tl-date">Sep 2021 - Jun 2023</div>
+</div>
+<p class="tl-intro">My first role out of my Bachelor's, on a 7-person engineering team supporting production Kubernetes infrastructure for a US-based client (under NDA, so I can't name them). This is where I learned to think in terms of uptime, blast radius, and what happens when something breaks and people are depending on it staying up.</p>
+<ul class="tl-list">
+<li>Upgraded production Kubernetes clusters on a regular cycle, planning each upgrade carefully so the cluster stayed current without breaking workloads that were already running.</li>
+<li>Renewed TLS certificates for the clusters on schedule, the kind of unglamorous work that only gets noticed when it's missed.</li>
+<li>Scaled nodes up and down in response to workload demand, balancing cost against having enough headroom for traffic spikes.</li>
+<li>Built working knowledge of the core services that keep a cluster running (Ingress, Pods, kube-scheduler, kube-controller-manager, kube-proxy), which mattered most when something broke and I needed to know where to start looking.</li>
+<li>Troubleshot incidents on critical services like Pods and Ingress, digging through logs and cluster events to find root causes under time pressure.</li>
+<li>Monitored cluster health continuously using Dynatrace, which caught a fair number of problems before they turned into incidents.</li>
+</ul>
+<p class="tl-intro" style="margin-top:14px;">Working inside a 7-person team on one client for nearly two years also taught me the less technical half of the job: staying easy to work with, picking things up quickly when the client's setup didn't match anything I'd seen before, and being someone teammates could hand a problem to without having to double check it afterward.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section id="projects">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Projects</div>
-      <h2 class="section-title">Things I've built</h2>
-      <p class="section-sub">Three projects, three different problems: cloud architecture trade-offs, desktop software engineering, and embedded IoT.</p>
-    </div>
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Projects</div>
+<h2 class="section-title">Things I've built</h2>
+<p class="section-sub">Three projects, three different problems: cloud architecture trade-offs, desktop software engineering, and embedded IoT.</p>
+</div>
 
-    <div class="proj-grid">
-      <div class="case-card">
-        <div class="case-top">
-          <span class="card-tag">Cloud / Backend</span>
-        </div>
-        <h3>Music Subscription App</h3>
-        <div class="case-grid">
-          <div>
-            <div class="case-label">Problem</div>
-            <div class="case-text">Most tutorials show you one way to deploy an app on AWS. I wanted to actually understand the trade-offs between the options, not just take someone's word for which one is "best."</div>
-          </div>
-          <div>
-            <div class="case-label">Approach</div>
-            <div class="case-text">Built one Flask-based music subscription service, then deployed the same application three different ways: on EC2, on ECS Fargate, and as Lambda functions, each backed by DynamoDB and S3, and containerized with Docker where it made sense.</div>
-          </div>
-          <div>
-            <div class="case-label">Outcome</div>
-            <div class="case-text">A working, hands-on comparison of cost, latency, and operational overhead across a traditional VM, a managed container service, and a fully serverless approach, instead of a purely theoretical answer.</div>
-          </div>
-        </div>
-        <div class="chip-row">
-          <span class="chip">EC2</span>
-          <span class="chip">ECS Fargate</span>
-          <span class="chip">Lambda</span>
-          <span class="chip">DynamoDB</span>
-          <span class="chip">S3</span>
-          <span class="chip">Docker</span>
-        </div>
-        <a class="card-link" href="https://github.com/Pushkar1912/music-subscription-app" target="_blank" rel="noopener">View on GitHub ↗</a>
-      </div>
+<div class="proj-grid">
+<div class="case-card reveal">
+<div class="case-top">
+<span class="card-tag">Cloud / Backend</span>
+</div>
+<h3>Music Subscription App</h3>
+<div class="case-grid">
+<div>
+<div class="case-label">Problem</div>
+<div class="case-text">Most tutorials show you one way to deploy an app on AWS. I wanted to actually understand the trade-offs between the options, not just take someone's word for which one is "best."</div>
+</div>
+<div>
+<div class="case-label">Approach</div>
+<div class="case-text">Built one Flask-based music subscription service, then deployed the same application three different ways: on EC2, on ECS Fargate, and as Lambda functions, each backed by DynamoDB and S3, and containerized with Docker where it made sense.</div>
+</div>
+<div>
+<div class="case-label">Outcome</div>
+<div class="case-text">A working, hands-on comparison of cost, latency, and operational overhead across a traditional VM, a managed container service, and a fully serverless approach, instead of a purely theoretical answer.</div>
+</div>
+</div>
+<div class="chip-row">
+<span class="chip">EC2</span>
+<span class="chip">ECS Fargate</span>
+<span class="chip">Lambda</span>
+<span class="chip">DynamoDB</span>
+<span class="chip">S3</span>
+<span class="chip">Docker</span>
+</div>
+<a class="card-link" href="https://github.com/Pushkar1912/music-subscription-app" target="_blank" rel="noopener">View on GitHub ↗</a>
+</div>
 
-      <div class="case-card">
-        <div class="case-top">
-          <span class="card-tag">Desktop / Software Eng.</span>
-        </div>
-        <h3>Healthcare Management System</h3>
-        <div class="case-grid">
-          <div>
-            <div class="case-label">Problem</div>
-            <div class="case-text">A lot of my coursework leaned heavily on ML and cloud work. I wanted a project that forced me to focus purely on solid software engineering fundamentals instead.</div>
-          </div>
-          <div>
-            <div class="case-label">Approach</div>
-            <div class="case-text">Built a JavaFX desktop application for managing healthcare records using a proper MVC architecture, with JPA and Hibernate handling persistence rather than hand-rolled SQL, and JUnit tests covering the core logic.</div>
-          </div>
-          <div>
-            <div class="case-label">Outcome</div>
-            <div class="case-text">A maintainable, testable desktop application that demonstrates I can write clean, well-structured software outside of an ML or notebook context, not just glue code around a model.</div>
-          </div>
-        </div>
-        <div class="chip-row">
-          <span class="chip">JavaFX</span>
-          <span class="chip">MVC</span>
-          <span class="chip">Hibernate / JPA</span>
-          <span class="chip">JUnit</span>
-        </div>
-        <a class="card-link" href="https://github.com/Pushkar1912/healthcare-javafx-assignment" target="_blank" rel="noopener">View on GitHub ↗</a>
-      </div>
+<div class="case-card reveal">
+<div class="case-top">
+<span class="card-tag">Desktop / Software Eng.</span>
+</div>
+<h3>Healthcare Management System</h3>
+<div class="case-grid">
+<div>
+<div class="case-label">Problem</div>
+<div class="case-text">A lot of my coursework leaned heavily on ML and cloud work. I wanted a project that forced me to focus purely on solid software engineering fundamentals instead.</div>
+</div>
+<div>
+<div class="case-label">Approach</div>
+<div class="case-text">Built a JavaFX desktop application for managing healthcare records using a proper MVC architecture, with JPA and Hibernate handling persistence rather than hand-rolled SQL, and JUnit tests covering the core logic.</div>
+</div>
+<div>
+<div class="case-label">Outcome</div>
+<div class="case-text">A maintainable, testable desktop application that demonstrates I can write clean, well-structured software outside of an ML or notebook context, not just glue code around a model.</div>
+</div>
+</div>
+<div class="chip-row">
+<span class="chip">JavaFX</span>
+<span class="chip">MVC</span>
+<span class="chip">Hibernate / JPA</span>
+<span class="chip">JUnit</span>
+</div>
+<a class="card-link" href="https://github.com/Pushkar1912/healthcare-javafx-assignment" target="_blank" rel="noopener">View on GitHub ↗</a>
+</div>
 
-      <div class="case-card">
-        <div class="case-top">
-          <span class="card-tag">IoT / Embedded</span>
-        </div>
-        <h3>Interactive Mirror Using Voice Assistance</h3>
-        <div class="case-grid">
-          <div>
-            <div class="case-label">Problem</div>
-            <div class="case-text">Ambient information displays (weather, time, reminders) are usually either expensive commercial products or purely conceptual projects. I wanted to build a genuinely working, affordable version.</div>
-          </div>
-          <div>
-            <div class="case-label">Approach</div>
-            <div class="case-text">Built a voice-controlled smart mirror on a Raspberry Pi, combining a two-way mirror panel, a display, and voice assistant integration so information could be pulled up hands-free.</div>
-          </div>
-          <div>
-            <div class="case-label">Outcome</div>
-            <div class="case-text">A working prototype that was written up and published academically, which was a good early lesson in documenting a project well enough for someone else to evaluate it.</div>
-          </div>
-        </div>
-        <div class="chip-row">
-          <span class="chip">Raspberry Pi</span>
-          <span class="chip">Voice Control</span>
-          <span class="chip">IoT</span>
-        </div>
-        <a class="card-link" href="https://www.irjet.net/volume8-issue04" target="_blank" rel="noopener">Published, IRJET Vol. 8, Issue 4, Sr. No. 330 ↗</a>
-      </div>
-    </div>
-  </div>
+<div class="case-card reveal">
+<div class="case-top">
+<span class="card-tag">IoT / Embedded</span>
+</div>
+<h3>Interactive Mirror Using Voice Assistance</h3>
+<div class="case-grid">
+<div>
+<div class="case-label">Problem</div>
+<div class="case-text">Ambient information displays (weather, time, reminders) are usually either expensive commercial products or purely conceptual projects. I wanted to build a genuinely working, affordable version.</div>
+</div>
+<div>
+<div class="case-label">Approach</div>
+<div class="case-text">Built a voice-controlled smart mirror on a Raspberry Pi, combining a two-way mirror panel, a display, and voice assistant integration so information could be pulled up hands-free.</div>
+</div>
+<div>
+<div class="case-label">Outcome</div>
+<div class="case-text">A working prototype that was written up and published academically, which was a good early lesson in documenting a project well enough for someone else to evaluate it.</div>
+</div>
+</div>
+<div class="chip-row">
+<span class="chip">Raspberry Pi</span>
+<span class="chip">Voice Control</span>
+<span class="chip">IoT</span>
+</div>
+<a class="card-link" href="https://www.irjet.net/volume8-issue04" target="_blank" rel="noopener">Published, IRJET Vol. 8, Issue 4, Sr. No. 330 ↗</a>
+</div>
+</div>
+</div>
 </section>
 
 <section id="skills">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Skills</div>
-      <h2 class="section-title">Tools I work with</h2>
-      <p class="section-sub">A mix that spans infrastructure, applied ML, and the geospatial and pipeline tooling from my internship work.</p>
-    </div>
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Skills</div>
+<h2 class="section-title">Tools I work with</h2>
+<p class="section-sub">A mix that spans infrastructure, applied ML, and the geospatial and pipeline tooling from my internship work.</p>
+</div>
 
-    <div class="skill-grid">
-      <div class="skill-card">
-        <h4>Technical Skill</h4>
-        <div class="pill-row">
-          <span class="pill">Python</span><span class="pill">Java</span><span class="pill">C++</span>
-          <span class="pill">SQL</span><span class="pill">XGBoost</span><span class="pill">TensorFlow</span>
-          <span class="pill">Scikit-learn</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h4>Geospatial &amp; Stats</h4>
-        <div class="pill-row">
-          <span class="pill">GeoPandas</span><span class="pill">QGIS</span><span class="pill">LOCO CV</span>
-          <span class="pill">Hyperparameter Tuning</span><span class="pill">OOD Detection</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h4>Cloud &amp; MLOps</h4>
-        <div class="pill-row">
-          <span class="pill">AWS</span><span class="pill">Docker</span><span class="pill">Kubernetes</span>
-          <span class="pill">Git</span><span class="pill">CI/CD</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h4>Pipeline &amp; Tuning</h4>
-        <div class="pill-row">
-          <span class="pill">Optuna</span><span class="pill">Kestra</span><span class="pill">Pipeline Orchestration</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="skill-grid">
+<div class="skill-card reveal">
+<h4>Technical Skill</h4>
+<div class="pill-row">
+<span class="pill">Python</span><span class="pill">Java</span><span class="pill">C++</span>
+<span class="pill">SQL</span><span class="pill">XGBoost</span><span class="pill">TensorFlow</span>
+<span class="pill">Scikit-learn</span>
+</div>
+</div>
+<div class="skill-card reveal">
+<h4>Geospatial &amp; Stats</h4>
+<div class="pill-row">
+<span class="pill">GeoPandas</span><span class="pill">QGIS</span><span class="pill">LOCO CV</span>
+<span class="pill">Hyperparameter Tuning</span><span class="pill">OOD Detection</span>
+</div>
+</div>
+<div class="skill-card reveal">
+<h4>Cloud &amp; MLOps</h4>
+<div class="pill-row">
+<span class="pill">AWS</span><span class="pill">Docker</span><span class="pill">Kubernetes</span>
+<span class="pill">Git</span><span class="pill">CI/CD</span>
+</div>
+</div>
+<div class="skill-card reveal">
+<h4>Pipeline &amp; Tuning</h4>
+<div class="pill-row">
+<span class="pill">Optuna</span><span class="pill">Kestra</span><span class="pill">Pipeline Orchestration</span>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Contact</div>
-      <h2 class="section-title">Let's talk</h2>
-      <p class="section-sub">Whether you're hiring for an AI Solutions Architect, Agentic AI Engineer, or similar role, want to chat about a project, or just want to say hi, I'd genuinely love to hear from you. Send a message below and I'll get back to you personally.</p>
-    </div>
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Contact</div>
+<h2 class="section-title">Let's talk</h2>
+<p class="section-sub">Whether you're hiring for an AI Solutions Architect, Agentic AI Engineer, or similar role, want to chat about a project, or just want to say hi, I'd genuinely love to hear from you. Send a message below and I'll get back to you personally.</p>
+</div>
 
-    <div class="contact-grid">
-      <form class="contact-form" action="https://formsubmit.co/pushkar.awate@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New message from portfolio site">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="contact-grid reveal">
+<form class="contact-form" action="https://formsubmit.co/pushkar.awate@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New message from portfolio site">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-        <div class="form-row">
-          <label for="c-name">Name</label>
-          <input id="c-name" type="text" name="name" required>
-        </div>
-        <div class="form-row">
-          <label for="c-email">Email address</label>
-          <input id="c-email" type="email" name="email" required>
-        </div>
-        <div class="form-row">
-          <label for="c-subject">Subject</label>
-          <input id="c-subject" type="text" name="subject" required>
-        </div>
-        <div class="form-row">
-          <label for="c-message">Message</label>
-          <textarea id="c-message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="border:none;cursor:pointer;">Submit</button>
-      </form>
+<div class="form-row">
+<label for="c-name">Name</label>
+<input id="c-name" type="text" name="name" required>
+</div>
+<div class="form-row">
+<label for="c-email">Email address</label>
+<input id="c-email" type="email" name="email" required>
+</div>
+<div class="form-row">
+<label for="c-subject">Subject</label>
+<input id="c-subject" type="text" name="subject" required>
+</div>
+<div class="form-row">
+<label for="c-message">Message</label>
+<textarea id="c-message" name="message" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary" style="border:none;cursor:pointer;">Submit</button>
+</form>
 
-      <div class="contact-side">
-        <h3>Connect</h3>
-        <p>Messages sent through this form come straight to my inbox. You can also find me here:</p>
-        <div class="social-row">
-          <a class="social-link" href="https://www.linkedin.com/in/pushkar-awate-5a58231b5/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
-          </a>
-          <a class="social-link" href="https://github.com/Pushkar1912" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="contact-side">
+<h3>Connect</h3>
+<p>Messages sent through this form come straight to my inbox. You can also find me here:</p>
+<div class="social-row">
+<a class="social-link" href="https://www.linkedin.com/in/pushkar-awate-5a58231b5/" target="_blank" rel="noopener" aria-label="LinkedIn">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+</a>
+<a class="social-link" href="https://github.com/Pushkar1912" target="_blank" rel="noopener" aria-label="GitHub">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <footer>
-  2026 Pushkar Awate. Built with plain HTML and CSS, hosted on GitHub Pages.
+2026 Pushkar Awate. Built with plain HTML and CSS, hosted on GitHub Pages.
 </footer>
+
+<script>
+(function(){
+"use strict";
+
+// Mobile nav toggle
+var toggle = document.getElementById('navToggle');
+var links = document.getElementById('navlinks');
+if(toggle && links){
+toggle.addEventListener('click', function(){
+var open = links.classList.toggle('open');
+toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+links.querySelectorAll('a').forEach(function(a){
+a.addEventListener('click', function(){
+links.classList.remove('open');
+toggle.setAttribute('aria-expanded', 'false');
+});
+});
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape'){
+links.classList.remove('open');
+toggle.setAttribute('aria-expanded', 'false');
+}
+});
+}
+
+// Scroll reveal
+var revealEls = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window && revealEls.length){
+var io = new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting){
+entry.target.classList.add('in-view');
+io.unobserve(entry.target);
+}
+});
+}, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+revealEls.forEach(function(el){ io.observe(el); });
+} else {
+revealEls.forEach(function(el){ el.classList.add('in-view'); });
+}
+})();
+</script>
 
 </body>
 </html>
-<!-- redeploy trigger -->
